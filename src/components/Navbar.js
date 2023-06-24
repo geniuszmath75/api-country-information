@@ -11,7 +11,7 @@ function Navbar() {
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-home">
-              Search Country
+              <button className="btn">Search Country</button>
             </Link>
           </li>
           <li className="nav-item">
@@ -28,11 +28,11 @@ function Navbar() {
                 location.pathname.length > 1 ? "nav-active" : "nav-not-active"
               }
             >
-              {location.pathname.includes(
-                "_") === true
-                  ? location.pathname.replace("_", " ").substring(1, )
-                  : location.pathname.substring(1, )
-              }
+              <button className="btn">
+                {location.pathname.includes("_") === true
+                  ? location.pathname.replace(/_/g, " ").substring(1)
+                  : location.pathname.substring(1)}
+              </button>
             </Link>
           </li>
         </ul>

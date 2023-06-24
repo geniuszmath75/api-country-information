@@ -1,6 +1,14 @@
+:root {
+  --primary: #daf7dc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
 }

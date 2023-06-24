@@ -23,7 +23,7 @@ function App() {
   const names = data.map((country) => 
     country.name.common.includes(" ") === true ? country.name.common.replace(/\s/g, "_") : country.name.common);
 
-  const keys = data.map((country) => country.population);
+  const keys = data.map((country) => country.cca3);
 
   return (
     <>
