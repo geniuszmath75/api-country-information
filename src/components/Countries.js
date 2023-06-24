@@ -42,7 +42,7 @@ function Countries() {
             {filteredCountries.map((country) => {
               return (
                 <Country
-                  key={country.population}
+                  key={country.cca3}
                   flag={country.flags.png}
                   name={country.name.common}
                   capital={country.capital}
