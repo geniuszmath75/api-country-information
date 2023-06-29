@@ -7,12 +7,14 @@
 .navbar {
     background-color: var(--secondary);
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
     z-index: 999;
+    top: 0;
 }
 
 .nav-menu {
@@ -47,10 +49,11 @@
     font-size: 16px;
     color: #fff;
     cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 .btn:hover {
-    transition: 0.3s ease-out;
+    transition: all 0.3s ease-out;
     background-color: #fff;
     color: var(--secondary);
 }
