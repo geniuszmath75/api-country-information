@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Navbar.css";
 
 function Navbar() {
@@ -10,7 +11,18 @@ function Navbar() {
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/" className="nav-home">
+            <Link
+              to={
+                location.pathname.endsWith("/")
+                  ? window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "smooth",
+                    })
+                  : "/"
+              }
+              className="nav-home"
+            >
               <button className="btn">Search Country</button>
             </Link>
           </li>
@@ -23,7 +35,11 @@ function Navbar() {
               &gt;&gt;
             </span>
             <Link
-              to={location.pathname}
+              to={window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })}
               className={
                 location.pathname.length > 1 ? "nav-active" : "nav-not-active"
               }
