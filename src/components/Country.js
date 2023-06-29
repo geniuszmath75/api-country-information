@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Country.css";
 
 const Country = ({ name, capital, flag, currency, language, currencySign }) => {
   return (
@@ -16,20 +17,19 @@ const Country = ({ name, capital, flag, currency, language, currencySign }) => {
           <img src={flag} alt={"flag of" + name} className="country-item-img" />
         </figure>
         <div className="country-short-info">
-          <div className="country-short-info-item">
-            <p className="country-label">Country name: {name}</p>
-          </div>
-          <div className="country-short-info-item">
-            <p className="country-label">Capital: {capital}</p>
-            <div className="country-short-info-item">
-              <p className="country-label">Language: {language}</p>
-            </div>
-            <div className="country-short-info-item">
-              <p className="country-label">
-                Currency: {currency + ` (${currencySign})`}{" "}
-              </p>
-            </div>
-          </div>
+          <p className="country-label">
+            Country name: <span className="label-value">{name}</span>
+          </p>
+          <p className="country-label">
+            Capital: <span className="label-value">{capital}</span>
+          </p>
+          <p className="country-label">
+            Language: <span className="label-value">{language}</span>
+          </p>
+          <p className="country-label">
+            Currency:{" "}
+            <span className="label-value">{currency + currencySign}</span>
+          </p>
         </div>
       </Link>
     </li>
