@@ -1,6 +1,4 @@
-:root {
-  --primary: #daf7dc;
-}
+@import "./index.css";
 
 * {
   box-sizing: border-box;
