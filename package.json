@@ -40,7 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://geniuszmath75.github.io/api-country-information/",
+  "homepage": "http://geniuszmath75.github.io/api-country-information/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
