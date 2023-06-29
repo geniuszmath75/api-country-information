@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Country from "./Country";
+import "./Countries.css";
 
 function Countries() {
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
 
+  const focusInput = useRef(null);
+
   useEffect(() => {
+    focusInput.current.focus();
+
     axios
       .get("https://restcountries.com/v3.1/independent?status=true")
       .then((res) => {
@@ -33,6 +38,7 @@ function Countries() {
             className="country-input"
             placeholder="Enter a country..."
             onChange={handleChange}
+            ref={focusInput}
           />
         </form>
       </div>
@@ -48,7 +54,11 @@ function Countries() {
                   capital={country.capital}
                   language={Object.values(country.languages)[0]}
                   currency={Object.values(country.currencies)[0].name}
-                  currencySign={Object.values(country.currencies)[0].symbol}
+                  currencySign={
+                    Object.values(country.currencies)[0].symbol !== undefined
+                      ? "(" + Object.values(country.currencies)[0].symbol + ")"
+                      : ""
+                  }
                 />
               );
             })}
