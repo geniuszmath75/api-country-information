@@ -1,4 +1,5 @@
 import React from "react";
+import "./Info.css";
 
 const Info = (props) => {
   return (
@@ -7,11 +8,17 @@ const Info = (props) => {
         <h1 className="country-name">{props.common}</h1>
       </div>
       <div className="country-flag">
-        <img src={props.flags} alt={"flag of " + props.common} className="flag" />
+        <img
+          src={props.flags}
+          alt={"flag of " + props.common}
+          className="flag"
+        />
       </div>
-      <div className="country-row-1">
+      <div className="country-row">
         <div className="info-item">
-          <h2 className="info-item-title">Names:</h2>
+          <div className="info-item-caption">
+            <h2 className="info-item-title">Names:</h2>
+          </div>
           <div className="info-item-details">
             <div className="info-item-row">
               <p className="info-item-label">Common name: </p>
@@ -32,7 +39,9 @@ const Info = (props) => {
           </div>
         </div>
         <div className="info-item">
-          <h2 className="info-item-title">Language:</h2>
+          <div className="info-item-caption">
+            <h2 className="info-item-title">Language: </h2>
+          </div>
           <div className="info-item-details">
             <div className="info-item-row">
               <p className="info-item-label">Native language: </p>
@@ -45,7 +54,9 @@ const Info = (props) => {
           </div>
         </div>
         <div className="info-item">
-          <h2 className="info-item-title">Geography:</h2>
+          <div className="info-item-caption">
+            <h2 className="info-item-title">Geography:</h2>
+          </div>
           <div className="info-item-details">
             <div className="info-item-row">
               <p className="info-item-label">Region: </p>
@@ -73,10 +84,10 @@ const Info = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="country-row-2">
         <div className="info-item">
-          <h2 className="info-item-title">Codes:</h2>
+          <div className="info-item-caption">
+            <h2 className="info-item-title">Codes: </h2>
+          </div>
           <div className="info-item-details">
             <div className="info-item-row">
               <p className="info-item-label">ISO 3166-1 alpha-2: </p>
@@ -101,7 +112,9 @@ const Info = (props) => {
           </div>
         </div>
         <div className="info-item">
-          <h2 className="info-item-title">Other information:</h2>
+          <div className="info-item-caption">
+            <h2 className="info-item-title">Other information: </h2>
+          </div>
           <div className="info-item-details">
             <div className="info-item-row">
               <p className="info-item-label">Population: </p>
@@ -124,6 +137,6 @@ const Info = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Info;
