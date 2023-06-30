@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://geniuszmath75.github.io/api-country-information/"
+  "homepage": "https://geniuszmath75.github.io"
 }
