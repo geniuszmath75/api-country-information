@@ -40,6 +40,12 @@
 
 }
 
+.info-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff1111;
+}
+
 .countries-container {
     display: flex;
     justify-content: center;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Country from "./Country";
 import "./Countries.css";
+import ShortNames from "../ShortNames";
 
 function Countries() {
   const [countries, setCountries] = useState([]);
@@ -41,6 +42,11 @@ function Countries() {
             ref={focusInput}
           />
         </form>
+        <div className="info-text">
+          {search !== "" && filteredCountries.length === 0 && (
+            `No countries found for "${search}".`
+          )}
+        </div>
       </div>
       <div className="countries-container">
         <div className="countries-wrapper">
