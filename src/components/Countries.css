@@ -40,6 +40,57 @@
 
 }
 
+.info-text {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    color: #ff1111;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-header {
+    letter-spacing: 0.1rem;
+}
+
+.filter-icons {
+    display: flex;
+}
+
+.non-active-filter, .active-filter {
+    padding: 8px;
+    border-radius: 100%;
+    cursor: pointer;    
+    border: none;
+}
+
+#alphabetically, #filteringLanguage, #filteringCurrency {
+    font-size: 20px;
+}
+
+.non-active-filter + .non-active-filter, .active-filter + .active-filter {
+    margin-left: 5px;
+}
+
+.non-active-filter {
+    background: transparent;
+}
+
+.active-filter {
+    background: var(--additional);
+}
+
 .countries-container {
     display: flex;
     justify-content: center;
