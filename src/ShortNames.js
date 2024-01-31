@@ -60,7 +60,7 @@ const ShortNames = [
     "name": "Congo, Democratic Republic of the"
   },
   { "id": 188, "alpha2": "cr", "alpha3": "cri", "name": "Costa_Rica" },
-  { "id": 384, "alpha2": "ci", "alpha3": "civ", "name": "Côte_d'Ivoire" },
+  { "id": 384, "alpha2": "ci", "alpha3": "civ", "name": "Ivory_Coast" },
   { "id": 191, "alpha2": "hr", "alpha3": "hrv", "name": "Croatia" },
   { "id": 192, "alpha2": "cu", "alpha3": "cub", "name": "Cuba" },
   { "id": 196, "alpha2": "cy", "alpha3": "cyp", "name": "Cyprus" },
@@ -246,7 +246,7 @@ const ShortNames = [
   { "id": 776, "alpha2": "to", "alpha3": "ton", "name": "Tonga" },
   { "id": 780, "alpha2": "tt", "alpha3": "tto", "name": "Trinidad_and_Tobago" },
   { "id": 788, "alpha2": "tn", "alpha3": "tun", "name": "Tunisia" },
-  { "id": 792, "alpha2": "tr", "alpha3": "tur", "name": "Türkiye" },
+  { "id": 792, "alpha2": "tr", "alpha3": "tur", "name": "Turkey" },
   { "id": 795, "alpha2": "tm", "alpha3": "tkm", "name": "Turkmenistan" },
   { "id": 798, "alpha2": "tv", "alpha3": "tuv", "name": "Tuvalu" },
   { "id": 800, "alpha2": "ug", "alpha3": "uga", "name": "Uganda" },
