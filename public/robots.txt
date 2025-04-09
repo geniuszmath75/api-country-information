@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://projektdamian.pl/sitemap.xml
+Sitemap: https://countrysearcher.pl/sitemap.xml

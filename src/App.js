@@ -8,7 +8,7 @@ import CountryInfo from "./components/pages/CountryInfo";
 import axios from "axios";
 
 function App() {
-
+  
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -20,8 +20,13 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  const names = data.map((country) => 
-    country.name.common.includes(" ") === true ? country.name.common.replace(/\s/g, "_") : country.name.common);
+  const names = data.map((country) =>
+    country.name.common.includes(" ") === true
+      ? country.name.common.replace(/\s/g, "_")
+      : country.name.common
+  );
+
+  names.sort();
 
   const keys = data.map((country) => country.cca3);
 
@@ -31,6 +36,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" Component={SearchCountry} />
+          {/* {pages.length > 0 && pages[7].map((country, key) => {
+            return (
+              <Route
+                key={keys[key]}
+                path={`/${country}`}
+                Component={CountryInfo}
+              />
+            );
+          })} */}
           {names.map((country, key) => {
             return (
               <Route key={keys[key]} path={`/${country}`} Component={CountryInfo} />
