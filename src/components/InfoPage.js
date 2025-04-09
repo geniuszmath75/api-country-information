@@ -29,7 +29,7 @@ function InfoPage() {
         setCountryInfo(data);
       })
       .catch((err) => console.log(err));
-  }, [refresh]);
+  }, [refresh, name]);
 
   return (
     <div className="info-container">
